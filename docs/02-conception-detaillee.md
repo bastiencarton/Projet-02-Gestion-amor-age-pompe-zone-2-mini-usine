@@ -175,3 +175,16 @@ La pompe principale P1 continue d’alimenter la zone de lavage. La pompe auxili
 L’ensemble est commandé par une carte ESP32, qui assure la lecture du capteur, la commande du relais et la communication avec l’automate.
 
 Cette conception permet de répondre à la problématique principale du projet : rendre l’amorçage de la pompe plus autonome, plus fiable et plus facile à superviser.
+
+
+
+
+## Modèle 3D Autodesk
+
+<iframe
+width="100%"
+height="700"
+src="https://autode.sk/43pgeca"
+frameborder="0"
+allowfullscreen>
+</iframe>
