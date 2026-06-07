@@ -61,7 +61,7 @@ Elle a été conçue afin de :
 * Garantir l'étanchéité du système.
 * Permettre une fabrication simple par impression 3D.
 
-![Cuve](images/cuve.png)
+![Cuve](images/cuve.jpeg)
 
 ### Modèle CAO
 
