@@ -3,7 +3,7 @@
 title: "Conception détaillée"
 layout: default
 nav_order: 3
-------------
+---
 
 # Conception détaillée
 
