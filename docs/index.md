@@ -63,13 +63,7 @@ La documentation est organisée en plusieurs parties :
 * **Analyse critique** : limites du système et améliorations possibles.
 * **Maintenance et utilisation** : consignes pour utiliser ou reprendre le projet.
 
----
 
-## Poster
-
-Cette section présentera le poster final du projet.
-
-![Poster projet](images/poster.jpg)
 
 ---
 
@@ -77,14 +71,7 @@ Cette section présentera le poster final du projet.
 
 Cette section présentera la vidéo de présentation du projet.
 
-La vidéo permettra de montrer :
-
-* le contexte du projet ;
-* le fonctionnement de l’installation ;
-* la solution mise en place ;
-* les tests réalisés ;
-* le résultat obtenu ;
-* les pistes d’amélioration.
+![Video projet](images/Vidéo_projet_I3_FISA_PAUC_Groupe02 (1) (1) (2) (1).mov)
 
 <video src="images/video-projet.mp4" controls title="Vidéo de présentation du projet" style="width: 100%;"></video>
 
