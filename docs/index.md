@@ -71,12 +71,11 @@ La documentation est organisée en plusieurs parties :
 
 Cette vidéo présente le fonctionnement du système d'amorçage automatique ainsi que les différentes étapes de réalisation du projet.
 
-<iframe
-width="100%"
-height="600"
+{% raw %}
+<iframe width="100%" height="600"
 src="https://www.youtube.com/embed/cvKz3VldXyE"
 title="Vidéo de démonstration"
 frameborder="0"
-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen>
 </iframe>
+{% endraw %}
