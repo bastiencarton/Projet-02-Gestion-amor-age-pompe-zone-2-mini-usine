@@ -26,7 +26,7 @@ Concrètement, avant chaque mise en route, un opérateur doit intervenir pour ve
 Ce fonctionnement est simple, mais il dépend entièrement de l’intervention humaine. Il ne correspond donc pas totalement à l’objectif d’automatisation recherché dans une mini-usine.
 
 ---
-![usine](images/IMG_5823.png)
+![usine](images/IMG_5823.jpeg)
 ## Problématique
 
 La problématique principale du projet est la suivante :
