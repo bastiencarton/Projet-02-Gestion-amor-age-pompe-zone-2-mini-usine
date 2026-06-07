@@ -1,165 +1,177 @@
 ---
 
-title: Conception détaillée
+title: "Conception détaillée"
 layout: default
-nav_order: 4
+nav_order: 3
 ------------
 
 # Conception détaillée
 
-Cette section présente l'architecture mécanique, hydraulique et électrique du système d'amorçage automatique développé dans le cadre du projet.
+## Introduction
 
-L'objectif est de garantir l'alimentation en eau de la pompe principale avant son démarrage afin d'éviter tout fonctionnement à sec susceptible d'endommager les équipements.
+Cette partie présente le fonctionnement général de la solution retenue pour automatiser l’amorçage de la pompe de lavage de la zone 2 de la mini-usine.
 
----
-
-# Architecture générale du système
-
-Le système est constitué des éléments suivants :
-
-* Une cuve servant de réserve d'eau.
-* Un couvercle assurant l'étanchéité du réservoir.
-* Une pompe auxiliaire d'amorçage.
-* Une pompe principale de nettoyage.
-* Un support de pompe imprimé en 3D.
-* Une alimentation électrique.
-* Un système de commande.
-
-Le fonctionnement général repose sur l'utilisation d'une réserve d'eau permettant à la pompe auxiliaire de remplir le circuit avant la mise en route de la pompe principale.
+L’objectif est d’expliquer comment le système fonctionne dans son ensemble, depuis la réserve d’eau principale jusqu’à la pompe de lavage. Les choix techniques précis seront détaillés dans la partie suivante.
 
 ---
 
-# Schéma fonctionnel
+## Principe général du système
 
-```text
-Cuve de stockage
-        │
-        ▼
-Pompe auxiliaire
-        │
-        ▼
-Circuit d'amorçage
-        │
-        ▼
-Pompe principale
-        │
-        ▼
-Nettoyage
-```
+La solution retenue repose sur l’ajout d’un système complémentaire à l’installation existante.
+
+L’installation initiale est conservée : la pompe principale continue d’assurer l’alimentation en eau du système de lavage des graviers. Cependant, afin d’éviter un amorçage manuel avant chaque démarrage, un système d’amorçage automatique est ajouté.
+
+Le principe général est le suivant :
+
+* la pompe principale P1 reste la pompe utilisée pour alimenter l’installation de lavage ;
+* un réservoir secondaire R1 est ajouté pour stocker une réserve d’eau d’amorçage ;
+* une pompe auxiliaire auto-amorçante P2 permet de remplir ce réservoir secondaire ;
+* un capteur de niveau C1 surveille la présence d’eau dans le réservoir secondaire ;
+* un clapet anti-retour C2 permet de maintenir l’eau dans le circuit et de limiter la perte d’amorçage.
+
+Ainsi, après un premier amorçage manuel, le système doit être capable de conserver une réserve d’eau suffisante pour faciliter les démarrages suivants de la pompe principale.
 
 ---
 
-# Conception mécanique
+## Séparation entre installation existante et système ajouté
 
-## Cuve
+Le système peut être séparé en deux parties.
 
-La cuve constitue la réserve d'eau nécessaire au fonctionnement du système.
+La première partie correspond à l’installation existante. Elle comprend la cuve principale, la pompe principale P1 et le circuit alimentant l’installation de lavage. Cette partie permet d’envoyer l’eau sous pression vers le système de nettoyage des graviers.
 
-Elle a été conçue afin de :
+La seconde partie correspond au système ajouté. Elle comprend la pompe auxiliaire P2, le réservoir secondaire R1, le capteur de niveau C1 et le clapet anti-retour C2. Cette partie a pour rôle de gérer l’amorçage et de maintenir une quantité d’eau disponible pour les démarrages suivants.
 
-* Stocker le volume d'eau nécessaire à l'amorçage.
-* Garantir l'étanchéité du système.
-* Permettre une fabrication simple par impression 3D.
-
-![Cuve](images/cuve.jpeg)
-
-### Modèle CAO
-
-[Ouvrir le modèle Onshape](https://cad.onshape.com/documents/6e1c8e487ed0883544359069/w/e8721b81bab6da346364b740/e/4b306e95fc1c7976077b1691)
+Cette séparation permet de conserver le fonctionnement de base de la mini-usine tout en ajoutant une fonction d’automatisation autour de la pompe.
 
 ---
 
-## Couvercle
+## Rôle de la pompe principale P1
 
-Le couvercle assure la fermeture du réservoir.
+La pompe principale P1 est l’élément déjà présent sur l’installation. Elle permet d’aspirer l’eau depuis la cuve principale et de l’envoyer vers l’installation de lavage.
 
-Ses principales fonctions sont :
+Cette pompe est indispensable au fonctionnement de la zone de lavage, car elle fournit la pression nécessaire au nettoyage des graviers.
 
-* Prévenir les fuites.
-* Protéger le liquide contre les contaminations extérieures.
-* Permettre l'intégration des différents raccords.
+Le problème rencontré est que cette pompe nécessite un amorçage pour démarrer correctement. Si elle démarre sans eau dans son circuit, elle peut fonctionner à sec, ce qui peut entraîner une perte d’efficacité ou une dégradation du matériel.
 
-
-### Modèle CAO
-
-[Ouvrir le modèle Onshape](https://cad.onshape.com/documents/bf3730f61decd7ed9248a76a/w/5105be7fe3059fdcb56a1324/e/0b04e27af5e27b6db5e7dc92)
+Dans notre solution, la pompe P1 conserve son rôle initial. Le système ajouté sert uniquement à améliorer ses conditions de démarrage.
 
 ---
 
-## Support de pompe
+## Rôle du réservoir secondaire R1
 
-Le support de pompe permet la fixation mécanique de la pompe auxiliaire.
+Le réservoir secondaire R1 sert de réserve d’eau d’amorçage.
 
-Les critères retenus lors de sa conception sont :
+Son rôle est de conserver une quantité d’eau disponible afin de permettre à la pompe principale de redémarrer dans de meilleures conditions. Au lieu de dépendre uniquement d’un amorçage manuel, le système dispose d’une réserve dédiée.
 
-* Rigidité suffisante.
-* Faible encombrement.
-* Simplicité de fabrication.
-* Résistance aux vibrations.
+Ce réservoir est donc un élément central de la solution. Il permet de passer d’un amorçage entièrement manuel à un fonctionnement plus autonome.
 
-
-### Modèle CAO
-
-[Ouvrir le modèle Onshape](https://cad.onshape.com/documents/296a5be8c0ab03996c8112af/w/6ff91ac11c5d4f26e0db8d3c/e/5a4104adc5a8d0b4c39f4827)
+Le niveau d’eau présent dans ce réservoir est surveillé par un capteur afin de s’assurer que la réserve est suffisante.
 
 ---
 
-## Pied
+## Rôle de la pompe auxiliaire P2
 
-Le pied assure la stabilité globale de l'ensemble.
+La pompe auxiliaire P2 est une pompe auto-amorçante ajoutée au système.
 
-Ses fonctions sont :
+Son rôle est de remplir le réservoir secondaire R1 à partir de la cuve principale. Elle permet donc de constituer ou de compléter la réserve d’eau d’amorçage.
 
-* Supporter la masse du système.
-* Réduire les mouvements parasites.
-* Faciliter l'intégration dans la mini-usine.
+Lorsque le niveau d’eau dans le réservoir secondaire devient insuffisant, le système peut commander la pompe auxiliaire afin de remplir à nouveau le réservoir.
 
-
-### Modèle CAO
-
-[Ouvrir le modèle Onshape](https://cad.onshape.com/documents/12021a1a71f227bb0c9d1fb7/w/e23dd1b24aff4961d910d315/e/29c2ff7fc65d679e9f673775)
+Cette pompe ne remplace pas la pompe principale. Elle a un rôle spécifique : assurer le remplissage du réservoir d’amorçage.
 
 ---
 
+## Rôle du capteur de niveau C1
 
-# Schéma électrique
+Le capteur de niveau C1 est placé dans le réservoir secondaire R1.
 
-Le schéma électrique présente l'ensemble des composants nécessaires à l'alimentation et à la commande du système.
+Il permet de détecter si le niveau d’eau est suffisant ou non. Cette information est utilisée par la partie commande du système pour autoriser ou non certaines actions.
 
-![Schéma électrique](images/schema-electrique.png)
+Par exemple, si le niveau d’eau est suffisant, le système peut considérer que les conditions d’amorçage sont correctes. À l’inverse, si le niveau est insuffisant, le système peut déclencher le remplissage du réservoir ou empêcher le démarrage de la pompe principale.
 
-Le circuit comporte :
-
-* L'alimentation principale.
-* Les protections électriques.
-* Les organes de commande.
-* La pompe auxiliaire.
-* La pompe principale.
-
-Cette architecture permet de sécuriser le fonctionnement du système tout en assurant une séquence d'amorçage fiable.
+Le capteur de niveau permet donc d’éviter un fonctionnement sans réserve d’eau suffisante.
 
 ---
 
-# Prototype réalisé
+## Rôle du clapet anti-retour C2
 
-La figure suivante présente le prototype final assemblé.
+Le clapet anti-retour C2 est ajouté sur le circuit hydraulique.
 
-![Prototype](images/photo-prototype.jpg)
+Son rôle est d’empêcher l’eau de repartir vers la cuve principale lorsque la pompe est arrêtée. Il permet donc de maintenir l’eau dans la partie utile du circuit et de limiter la perte d’amorçage.
 
-L'ensemble des composants mécaniques, hydrauliques et électriques est intégré dans une structure compacte destinée à être utilisée dans le cadre de la mini-usine pédagogique.
+Ce composant est important, car il contribue à conserver les conditions nécessaires au redémarrage de la pompe principale.
+
+Sans clapet anti-retour, une partie de l’eau pourrait retourner vers la cuve principale, ce qui réduirait l’efficacité du système d’amorçage.
 
 ---
 
-# Logique de fonctionnement
+## Fonctionnement global du cycle
 
-Le système suit la séquence suivante :
+Le fonctionnement global peut être décrit en plusieurs étapes.
 
-1. Mise sous tension.
-2. Vérification des conditions de démarrage.
-3. Activation de la pompe auxiliaire.
-4. Remplissage du circuit.
-5. Amorçage de la pompe principale.
-6. Fonctionnement normal.
-7. Arrêt du système.
+Dans un premier temps, l’installation nécessite un premier amorçage manuel. Cette étape permet de remplir le circuit initialement et de mettre le système dans des conditions de fonctionnement correctes.
 
-Cette séquence permet d'éviter les risques liés au fonctionnement à sec tout en garantissant une mise en service reproductible.
+Ensuite, le système ajouté prend le relais pour maintenir une réserve d’eau disponible. La pompe auxiliaire P2 peut remplir le réservoir secondaire R1 à partir de la cuve principale.
+
+Le capteur de niveau C1 surveille ensuite le niveau dans le réservoir secondaire. Si le niveau est suffisant, le système considère que la réserve d’amorçage est disponible. Si le niveau est insuffisant, le système peut déclencher un remplissage ou signaler une condition de défaut.
+
+Lors du démarrage suivant, la présence d’eau dans le réservoir secondaire et dans le circuit permet de faciliter l’amorçage de la pompe principale P1. Le clapet anti-retour C2 limite les pertes d’eau dans le circuit et aide à maintenir l’amorçage.
+
+---
+
+## Logique de commande
+
+La logique de commande repose sur une carte ESP32.
+
+L’ESP32 reçoit l’information du capteur de niveau C1. En fonction de cette information, elle peut commander le système, notamment la pompe auxiliaire ou le relais associé.
+
+La logique générale peut être résumée ainsi :
+
+* si le niveau d’eau dans R1 est suffisant, le système est prêt pour le fonctionnement ;
+* si le niveau d’eau est insuffisant, le remplissage du réservoir doit être réalisé ;
+* si le remplissage n’est pas possible ou si une condition anormale est détectée, une alerte doit être transmise ;
+* les informations importantes sont communiquées à l’automate pour permettre la supervision.
+
+Cette logique permet de rendre le système plus autonome tout en conservant une possibilité de contrôle par l’opérateur.
+
+---
+
+## Communication avec l’automate
+
+Le système doit transmettre certaines informations à l’automate de la mini-usine.
+
+Cette communication permet d’intégrer le système d’amorçage à l’environnement existant. L’automate peut ainsi recevoir des informations sur l’état du système et les afficher sur l’interface HMI.
+
+Les informations transmises peuvent concerner :
+
+* l’état du capteur de niveau ;
+* l’état du réservoir secondaire ;
+* l’état de fonctionnement de la pompe auxiliaire ;
+* l’état général du système ;
+* les défauts ou alertes éventuels.
+
+Cette communication permet de ne pas avoir un système isolé, mais bien un système intégré à la supervision de la mini-usine.
+
+---
+
+## Supervision par l’interface HMI
+
+L’interface HMI permet à l’opérateur de suivre le fonctionnement du système.
+
+Elle doit afficher les informations principales, comme le niveau du réservoir secondaire, l’état de la pompe et les éventuelles alertes.
+
+Elle peut également permettre à l’opérateur d’effectuer certaines actions manuelles, par exemple lancer un cycle d’amorçage ou forcer le remplissage du réservoir secondaire.
+
+Cette supervision est importante, car elle rend le fonctionnement du système plus lisible et plus facilement exploitable.
+
+---
+
+## Synthèse du fonctionnement
+
+Le fonctionnement retenu repose donc sur une logique simple : conserver l’installation existante, puis ajouter un système capable de maintenir une réserve d’eau d’amorçage.
+
+La pompe principale P1 continue d’alimenter la zone de lavage. La pompe auxiliaire P2 remplit le réservoir secondaire R1. Le capteur de niveau C1 vérifie que la réserve d’eau est suffisante. Le clapet anti-retour C2 permet de limiter la perte d’amorçage.
+
+L’ensemble est commandé par une carte ESP32, qui assure la lecture du capteur, la commande du relais et la communication avec l’automate.
+
+Cette conception permet de répondre à la problématique principale du projet : rendre l’amorçage de la pompe plus autonome, plus fiable et plus facile à superviser.
