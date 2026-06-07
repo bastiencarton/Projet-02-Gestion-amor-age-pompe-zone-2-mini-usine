@@ -79,7 +79,6 @@ Ses principales fonctions sont :
 * Protéger le liquide contre les contaminations extérieures.
 * Permettre l'intégration des différents raccords.
 
-![Couvercle](images/couvercle.png)
 
 ### Modèle CAO
 
@@ -98,7 +97,6 @@ Les critères retenus lors de sa conception sont :
 * Simplicité de fabrication.
 * Résistance aux vibrations.
 
-![Support de pompe](images/support-pompe.png)
 
 ### Modèle CAO
 
@@ -116,7 +114,6 @@ Ses fonctions sont :
 * Réduire les mouvements parasites.
 * Faciliter l'intégration dans la mini-usine.
 
-![Pied](images/pied.png)
 
 ### Modèle CAO
 
