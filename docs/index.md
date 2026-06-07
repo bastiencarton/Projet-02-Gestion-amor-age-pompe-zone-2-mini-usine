@@ -67,12 +67,16 @@ La documentation est organisée en plusieurs parties :
 
 ---
 
-## Vidéo
+## Vidéo de démonstration
 
-Cette section présentera la vidéo de présentation du projet.
+Cette vidéo présente le fonctionnement du système d'amorçage automatique ainsi que les différentes étapes de réalisation du projet.
 
-![Video projet](images/Vidéo_projet_I3_FISA_PAUC_Groupe02 (1) (1) (2) (1).mov)
-
-<video src="images/video-projet.mp4" controls title="Vidéo de présentation du projet" style="width: 100%;"></video>
-
----
+<iframe
+width="100%"
+height="600"
+src="https://www.youtube.com/embed/cvKz3VldXyE"
+title="Vidéo de démonstration"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
