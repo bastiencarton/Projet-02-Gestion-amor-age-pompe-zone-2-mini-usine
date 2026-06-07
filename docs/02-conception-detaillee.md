@@ -29,7 +29,7 @@ Le principe général est le suivant :
 * un capteur de niveau C1 surveille la présence d’eau dans le réservoir secondaire ;
 * un clapet anti-retour C2 permet de maintenir l’eau dans le circuit et de limiter la perte d’amorçage.
 
-Ainsi, après un premier amorçage manuel, le système doit être capable de conserver une réserve d’eau suffisante pour faciliter les démarrages suivants de la pompe principale.
+Ainsi, même sans un premier amorçage manuel, le système doit être capable de conserver une réserve d’eau suffisante pour faciliter les démarrages suivants de la pompe principale.
 
 ---
 
