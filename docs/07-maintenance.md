@@ -77,7 +77,7 @@ Il faut donc vérifier régulièrement :
 * le niveau d’eau dans le réservoir secondaire.
 
 Si le réservoir ne se remplit pas correctement, il faut arrêter le système et identifier l’origine du problème avant de relancer la pompe.
-
+![Tuyau](images/tuyau.jpeg)
 ---
 
 ## Précautions liées au capteur de niveau
