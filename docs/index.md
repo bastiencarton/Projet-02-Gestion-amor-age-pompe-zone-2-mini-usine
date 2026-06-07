@@ -1,45 +1,91 @@
 ---
+
 layout: home
 nav_order: 1
 title: Accueil
 permalink: /
 ---
 
-# Bienvenue sur notre documentation
+# Projet de gestion d’amorçage de pompe
 
-Bienvenue dans la documentation du projet XY. Ce site a pour but de fournir toutes les informations nécessaires pour comprendre, utiliser et reproduire efficacement notre projet.
+Bienvenue sur la documentation de notre projet de **gestion de l’amorçage de pompe pour la zone 2 de la mini-usine**.
 
-[Notre projet sur Onshape](https://cad.onshape.com/documents/2860ed3d58f1b518e6857770/w/82b3c0e474623135ccb76fa3/e/0cab16137cd459ee83ebe56e?renderMode=0&uiState=6936dc0e23fecc27d34268b2){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Notre repo GitHub](https://github.com/Makerspace-Amiens/template-project){: .btn .fs-5 .mb-4 .mb-md-0 }
+Ce site présente le travail réalisé autour de l’automatisation de l’amorçage d’une pompe utilisée dans la partie lavage des graviers. L’objectif est d’expliquer le contexte du projet, les choix techniques effectués, la conception de la solution, les étapes de réalisation, les tests menés ainsi que les améliorations possibles.
 
-<iframe height="600" width="100%" src="https://modelembedder.net/embed?did=2860ed3d58f1b518e6857770&wvm=v&wvmid=6280fca954e7770df59e5a2f&eid=0cab16137cd459ee83ebe56e&elementType=ASSEMBLY" frameborder="0"></iframe>
+[Notre repo GitHub](https://github.com/bastiencarton/Projet-02-Gestion-amor-age-pompe-zone-2-mini-usine){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 }
 
-{: .warning }
->Pour intégrer la visualisation de votre projet Onshape, utilisez le site https://modelembedder.net . Activez le partage par lien via l'outil de partage de Onshape. n'oubliez pas d'activer l'option "export". Puis completez l'iframe ci-dessus avec le lien généré par le site https://modelembedder.net. Vous pouvez mettre à jour également le bouton avec le lien de partage de votre modèle.
+---
 
+## À propos du projet
 
-## À propos du Projet
+Dans la mini-usine d’UniLaSalle Amiens, les graviers sont transportés sur différents convoyeurs avant d’être lavés, séchés, chauffés puis conditionnés. Notre projet concerne plus particulièrement la **zone de lavage**, où une pompe hydraulique permet d’envoyer de l’eau sous pression afin de nettoyer les graviers.
 
-Décrivez ici en quelques lignes l'objectif et l'aperçu général de votre projet. Quel est son but ? À qui est-il destiné ? Quels problèmes cherche-t-il à résoudre ?
+Actuellement, cette pompe nécessite un amorçage manuel avant son démarrage. Cette opération consiste à verser de l’eau dans le corps de pompe afin de permettre la création de l’aspiration. Ce fonctionnement demande une intervention humaine systématique et peut entraîner des risques en cas d’oubli, notamment un fonctionnement à sec de la pompe.
 
+Le but du projet est donc de proposer une solution permettant de rendre cette phase d’amorçage plus automatique, plus fiable et plus facile à superviser.
+
+---
+
+## Objectif du projet
+
+L’objectif principal est de concevoir un système capable de rendre la pompe automatiquement amorçable après un premier amorçage manuel.
+
+La solution doit permettre de :
+
+* maintenir une réserve d’eau pour les démarrages suivants ;
+* détecter un niveau d’eau insuffisant ;
+* éviter le fonctionnement à sec de la pompe ;
+* limiter les interventions humaines ;
+* transmettre les informations de fonctionnement à l’automate ;
+* permettre une supervision depuis l’interface HMI.
+
+---
+
+## Présentation générale de la solution
+
+La solution développée repose sur l’ajout d’un système de commande et de supervision autour de la pompe existante.
+
+Le fonctionnement général est le suivant : le système surveille le niveau d’eau disponible pour l’amorçage, commande les éléments nécessaires au remplissage ou au démarrage, puis transmet les informations utiles vers l’automate. L’opérateur peut également suivre l’état du système et intervenir depuis l’interface HMI si nécessaire.
+
+Cette solution permet d’améliorer la fiabilité de l’installation tout en conservant le matériel déjà présent dans la mini-usine.
+
+---
+
+## Organisation de la documentation
+
+La documentation est organisée en plusieurs parties :
+
+* **Contexte et besoin** : présentation du problème initial et des objectifs du projet.
+* **Choix techniques** : justification des composants et des solutions retenues.
+* **Conception détaillée** : description du fonctionnement prévu du système.
+* **Réalisation** : présentation du câblage, de la programmation et de l’intégration.
+* **Validation** : tests réalisés et résultats obtenus.
+* **Analyse critique** : limites du système et améliorations possibles.
+* **Maintenance et utilisation** : consignes pour utiliser ou reprendre le projet.
+
+---
 
 ## Poster
 
-Ici vous publierez le poster de votre projet.
+Cette section présentera le poster final du projet.
 
 ![Poster projet](images/poster.jpg)
 
+---
+
 ## Vidéo
 
-Ici vous publierez la vidéo de votre projet. 
-- 1min30 au format vertical
-- Présentation du projet 
-- Des explication du fonctionnement du projet
-- Des vues du projet / Prototype / Application etc... 
-- Des plans du fonctionnement (même basique ou des éléments séparés)
-- Une conclusion
-- Si en stockage local : <50mo
+Cette section présentera la vidéo de présentation du projet.
 
-<video src="images/intro_amiens.mp4" controls title="Title"  style="width: 100%;"></video>
+La vidéo permettra de montrer :
+
+* le contexte du projet ;
+* le fonctionnement de l’installation ;
+* la solution mise en place ;
+* les tests réalisés ;
+* le résultat obtenu ;
+* les pistes d’amélioration.
+
+<video src="images/video-projet.mp4" controls title="Vidéo de présentation du projet" style="width: 100%;"></video>
 
 ---
